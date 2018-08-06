@@ -1,0 +1,11 @@
+hostname rtr1-1
+int gi 0/0
+  ip add 10.0.1.2 255.255.255.0
+  no shut
+  exit
+ip domain-name lab.local
+crypto key gen rsa mod 2048
+username admin priv 15 sec admin
+line vty 0 15
+  transport input ssh
+  login local
