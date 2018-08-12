@@ -46,7 +46,6 @@ resource "libvirt_domain" "rtr-1" {
   vcpu = 1
 
   network_interface {
-    hostname = "master"
     network_name = "vm_network"
   }
   network_interface {
@@ -68,7 +67,6 @@ resource "libvirt_domain" "sw-1" {
   vcpu = 1
 
   network_interface {
-    hostname = "master"
     network_name = "vm_network"
   }
   network_interface {
