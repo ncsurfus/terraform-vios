@@ -59,6 +59,9 @@ resource "libvirt_domain" "rtr-1" {
   disk {
        volume_id = "${libvirt_volume.rtr-1.id}"
   }
+  xml {
+    xslt = "${file("nicmodel.xsl")}"
+  }
 }
 
 resource "libvirt_domain" "sw-1" {
@@ -79,5 +82,8 @@ resource "libvirt_domain" "sw-1" {
   }
   disk {
        volume_id = "${libvirt_volume.sw-1.id}"
+  }
+  xml {
+    xslt = "${file("nicmodel.xsl")}"
   }
 }
