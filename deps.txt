@@ -1,3 +1,5 @@
+- Enable enhanced virtualization in Ubuntu VM
+
 - Install Terraform
 
 - Install libvirt daemon
