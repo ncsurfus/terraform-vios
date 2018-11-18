@@ -1,3 +1,4 @@
+terraform destroy -auto-approve
 virsh undefine sw-1
 virsh destroy nxos9-1
 virsh destroy rtr-1
