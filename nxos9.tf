@@ -22,7 +22,7 @@ resource "libvirt_domain" "nxos9-1" {
     network_name = "vm_network"
   }
   network_interface {
-    network_name = "default"
+    network_name = "vm_network"
   }
   console {
     type        = "pty"

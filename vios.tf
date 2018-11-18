@@ -49,7 +49,7 @@ resource "libvirt_domain" "rtr-1" {
     network_name = "vm_network"
   }
   network_interface {
-    network_name = "default"
+    network_name = "vm_network"
   }
   console {
     type        = "pty"
@@ -73,7 +73,7 @@ resource "libvirt_domain" "sw-1" {
     network_name = "vm_network"
   }
   network_interface {
-    network_name = "default"
+    network_name = "vm_network"
   }
   console {
     type        = "pty"
