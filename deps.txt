@@ -1,0 +1,8 @@
+- Install Terraform
+- Install Terraform libvirt provider
+  - Requires go, gcc, libvirt-dev, and pkg-config
+  https://github.com/dmacvicar/terraform-provider-libvirt
+- Install libvirt
+  sudo apt install libvirt-clients
+- Install guestfish
+  sudo apt install libvirt-tools
