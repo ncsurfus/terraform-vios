@@ -8,3 +8,5 @@
   sudo apt install libvirt-clients
 - Install guestfish
   sudo apt install libvirt-tools
+- Ensure libvirt is started
+  service libvirtd restart
