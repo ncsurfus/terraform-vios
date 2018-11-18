@@ -1,12 +1,30 @@
 - Install Terraform
+
 - Install libvirt daemon
    sudo apt-get install libvirt-daemon-system
+
 - Install Terraform libvirt provider
-  - Requires go, gcc, libvirt-dev, and pkg-config
+  - Requires go, gcc, libvirt-dev, xsltproc, and pkg-config
   https://github.com/dmacvicar/terraform-provider-libvirt
+
 - Install libvirt
   sudo apt install libvirt-clients
+
 - Install guestfish
   sudo apt install libvirt-tools
+
 - Ensure libvirt is started
   service libvirtd restart
+
+- Ensure default pool is created
+virsh pool-define /dev/stdin <<EOF
+<pool type='dir'>
+  <name>default</name>
+  <target>
+    <path>/var/lib/libvirt/images</path>
+  </target>
+</pool>
+EOF
+
+virsh pool-start default
+virsh pool-autostart default
