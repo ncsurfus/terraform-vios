@@ -1,5 +1,7 @@
 - Enable enhanced virtualization in Ubuntu VM
 
+- Ensure libvirt has access to his images (may need to run as root)
+
 - Install Terraform
 
 - Install libvirt daemon
